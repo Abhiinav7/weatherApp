@@ -11,9 +11,9 @@ class WeatherData {
     final queryParameters = {
       "key": "$key",
       "q": "calicut",
-      "days" : 3
+
     };
-    var url = Uri.https(baseurl, '/v1/forecast.json', queryParameters);
+    var url = Uri.https(baseurl, '/v1/current.json', queryParameters);
     final response = await http.get(url);
     if (response.statusCode == 200) {
   //print(response.body);
